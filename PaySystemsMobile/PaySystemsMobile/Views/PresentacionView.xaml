@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+             x:Class="PaySystemsMobile.Views.PresentacionView"             
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"   
+             ios:NavigationPage.IsNavigationBarTranslucent="True"            
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Resources>
+        <x:Boolean x:Key="Label2IsVisible"></x:Boolean>        
+    </ContentPage.Resources>
+    <AbsoluteLayout>        
+        <CarouselView ItemsSource="{Binding CarouselObject}"                     
+                      IndicatorView="indicatorview"
+                      Loop="False"
+                      VerticalOptions="FillAndExpand"                  
+                      AbsoluteLayout.LayoutBounds="1,1,1,1" 
+                      AbsoluteLayout.LayoutFlags="All">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>                    
+                    <AbsoluteLayout BindingContext="{Binding CarouselObject}">
+                        <Image Source="{Binding Foto}"  
+                               Aspect="AspectFill"
+                               AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                               AbsoluteLayout.LayoutFlags="All"/>
+                        <BoxView AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                 AbsoluteLayout.LayoutFlags="All">
+                            <BoxView.Background>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <LinearGradientBrush.GradientStops >
+                                        <GradientStop Color="#000000" Offset="0"/>
+                                        <GradientStop Color="Transparent" Offset="0.5"/>
+                                        <GradientStop Color="#000000" Offset="1"/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </BoxView.Background>
+                        </BoxView>
+                        <Grid AbsoluteLayout.LayoutBounds="1,1,1,1" 
+                              AbsoluteLayout.LayoutFlags="All"
+                              RowDefinitions="4.2*,*"                              
+                              RowSpacing="15">
+                            <material:MaterialLabel Text="{Binding TextLabel1}"
+                                                    TextColor="White"
+                                                    Grid.Column="0"
+                                                    VerticalOptions="End"
+                                                    Grid.Row="0"                                                                                                                                                           
+                                                    HorizontalTextAlignment="Center"                                                     
+                                                    TypeScale="H4"
+                                                    LineHeight="1.1"                                                    
+                                                    FontAttributes="Bold"/>
+                            <material:MaterialLabel x:Name="Label2"
+                                                    Text="{Binding TextLabel2}"
+                                                    TextColor="LightGray"
+                                                    Grid.Column="0"                                               
+                                                    Grid.Row="1"
+                                                    HorizontalTextAlignment="Center"
+                                                    TypeScale="Caption"
+                                                    FontSize="17"                                
+                                                    LineHeight="1.1"                                                    
+                                                    FontAttributes="Bold"
+                                                    IsVisible="{DynamicResource Key=Label2IsVisible}">
+                                <!--<Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnLabelClickedAsync" />
+                                    
+                                </Label.GestureRecognizers>-->
+                            </material:MaterialLabel>
+                        </Grid>                            
+                    </AbsoluteLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <Grid AbsoluteLayout.LayoutBounds="1,1,1,1" 
+              AbsoluteLayout.LayoutFlags="All"
+              RowDefinitions="auto,*,auto"
+              ColumnDefinitions="0.25*,0.4*,0.4*,0.2*"
+              RowSpacing="0"
+              ColumnSpacing="0"
+              Padding="0,35,0,0" 
+              InputTransparent="True" 
+              CascadeInputTransparent="False">
+            <IndicatorView x:Name="indicatorview"
+                           Margin="0,0,0,20"
+                           VerticalOptions="End"                           
+                           Grid.Row="1"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="4"
+                           IndicatorsShape="Circle"
+                           IndicatorColor="DarkGray"
+                           SelectedIndicatorColor="LightGray"
+                           HorizontalOptions="Center"                       
+                           BackgroundColor="Transparent"
+                           IndicatorSize="8"/>
+            <material:MaterialButton Text="¡Comienza ya!"     
+                                     HeightRequest="60"                                     
+                                     Grid.Row="2"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="4"
+                                     HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="End"
+                                     Command="{Binding NavegaraRegistroCommand}"/>
+            <Image Source="img_simbolologo.png"
+                   BackgroundColor="Transparent"
+                   HorizontalOptions="Start"
+                   HeightRequest="30"
+                   WidthRequest="30"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Margin="15,0,0,0"/>
+            <Button Text="PRIVACIDAD"                        
+                    FontFamily="{StaticResource FontFamily.RobotoMedium}"
+                    TextColor="white" 
+                    FontSize="14"
+                    Grid.Row="0"
+                    Grid.Column="1"                                     
+                    BackgroundColor="Transparent"/>
+            <Button Text="INICIAR SESIÓN"
+                    FontFamily="{StaticResource FontFamily.RobotoMedium}"
+                    FontSize="14"
+                    TextColor="white"
+                    Grid.Row="0"
+                    Grid.Column="2"                                     
+                    BackgroundColor="Transparent"/>
+            <Button Text="&#xe5d4;"
+                    FontFamily="Material"
+                    TextColor="DarkGray"
+                    Margin="0,0,0,0"
+                    FontSize="20"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    HorizontalOptions="End"
+                    BackgroundColor="Transparent"/>
+        </Grid>
+
+    </AbsoluteLayout>
+</ContentPage>
+    

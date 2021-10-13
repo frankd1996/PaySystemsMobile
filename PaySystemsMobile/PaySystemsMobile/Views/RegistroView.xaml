@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaySystemsMobile.Views.RegistroView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+             ios:NavigationPage.IsNavigationBarTranslucent="True"
+             NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout>
+                <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto, auto"
+                      ColumnDefinitions="auto,*"
+                      ColumnSpacing="0"              
+                      Padding="20,30,20,10"
+                      VerticalOptions="FillAndExpand"                      
+                      AbsoluteLayout.LayoutBounds="1,1,1,1" 
+                      AbsoluteLayout.LayoutFlags="All"
+                      BackgroundColor="{x:StaticResource Material.Color.Background}">
+                    <!--<Grid.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <LinearGradientBrush.GradientStops >
+                                <GradientStop Offset="0" Color="White"/>
+                                <GradientStop Offset="1" Color="#2A3141"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Grid.Background>-->
+                    <Button Grid.Column="0"
+                            Text="&#xe5c4;"
+                            WidthRequest="50"
+                            Margin="-15,0,0,0"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            FontFamily="Material"
+                            FontSize="30"
+                            TextColor="DarkGray"
+                            Command="{Binding NavegaraPresentacionCommand}"/>
+                    <Image Source="icono_aplicacion.png"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           HorizontalOptions="Center"
+                           HeightRequest="40"
+                           Margin="0,15,0,0"/>
+                    <material:MaterialLabel Text="Regístrate con Email"
+                                            TextColor="{x:StaticResource Material.Color.OnBackground}"
+                                            TypeScale="H4"
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="2"
+                                            Margin="0,15,0,30"/>
+                    <material:MaterialTextField Grid.Row="2"                                               
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                Margin="0,0,0,10"
+                                                Placeholder="Nombre y Apellido"
+                                                CardBackgroundColor="#FAFCFF"                                                                                                                                  
+                                                TextColor="{x:StaticResource Material.Color.OnBackground}"
+                                                PlaceholderColor="#AAB2B5"
+                                                FloatingPlaceholderColor="#AAB2B5"
+                                                UnderlineColor="#AAB2B5"
+                                                TintColor="#AAB2B5"
+                                                ShouldAnimateUnderline="false"
+                                                InputType="Text"
+                                                LeadingIcon="icono_nombre.png"
+                                                LeadingIconTintColor="darkgray"
+                                                FloatingPlaceholderEnabled="true"/>
+                    <material:MaterialTextField Grid.Row="3"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                Margin="0,0,0,10"
+                                                Placeholder="Correo electrónico"
+                                                CardBackgroundColor="#FAFCFF"                                                                                                                                  
+                                                TextColor="{x:StaticResource Material.Color.OnSurface}"
+                                                PlaceholderColor="#AAB2B5"
+                                                FloatingPlaceholderColor="#AAB2B5"
+                                                UnderlineColor="#AAB2B5"
+                                                TintColor="#AAB2B5"
+                                                ShouldAnimateUnderline="false"
+                                                InputType="Email"
+                                                LeadingIcon="icono_email.png"
+                                                LeadingIconTintColor="darkgray"
+                                                FloatingPlaceholderEnabled="true"/>
+                    <material:MaterialTextField Grid.Row="4"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                Margin="0,0,0,10"
+                                                Placeholder="Contraseña"
+                                                CardBackgroundColor="#FAFCFF"                                                                                                                                  
+                                                TextColor="{x:StaticResource Material.Color.OnSurface}"
+                                                PlaceholderColor="#AAB2B5"
+                                                FloatingPlaceholderColor="#AAB2B5"
+                                                UnderlineColor="#AAB2B5"
+                                                TintColor="#AAB2B5"
+                                                ShouldAnimateUnderline="false"
+                                                InputType="Password"
+                                                LeadingIcon="icono_password.png"
+                                                LeadingIconTintColor="darkgray"
+                                                FloatingPlaceholderEnabled="true"/>
+                    <material:MaterialTextField Grid.Row="5"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                Margin="0,0,0,10"
+                                                Placeholder="Número de teléfono" 
+                                                CardBackgroundColor="#FAFCFF"                                                                                                                                  
+                                                TextColor="{x:StaticResource Material.Color.OnSurface}"
+                                                PlaceholderColor="#AAB2B5"
+                                                FloatingPlaceholderColor="#AAB2B5"
+                                                UnderlineColor="#AAB2B5"
+                                                TintColor="#AAB2B5"
+                                                ShouldAnimateUnderline="false"
+                                                InputType="Telephone"
+                                                LeadingIcon="icono_smartphone.png"
+                                                LeadingIconTintColor="darkgray"
+                                                FloatingPlaceholderEnabled="true"/>
+                    <material:MaterialTextField Grid.Row="6"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                Margin="0,0,0,0"
+                                                Placeholder="Nombre de usuario"
+                                                CardBackgroundColor="#FAFCFF"                                                                                                                                  
+                                                TextColor="{x:StaticResource Material.Color.OnSurface}"
+                                                PlaceholderColor="#AAB2B5"
+                                                FloatingPlaceholderColor="#AAB2B5"
+                                                UnderlineColor="#AAB2B5"
+                                                TintColor="#AAB2B5"
+                                                ShouldAnimateUnderline="false"
+                                                InputType="Default"
+                                                LeadingIcon="icono_nombreusuario.png"
+                                                LeadingIconTintColor="darkgray"
+                                                FloatingPlaceholderEnabled="true"/>
+                    <material:MaterialCheckbox Grid.Row="7" 
+                                               VerticalOptions="Start" 
+                                               Grid.Column="0"/>
+                    <material:MaterialLabel Grid.Row="7"
+                                            Grid.Column="1" 
+                                            TypeScale="Caption"
+                                            Margin="-7,17,0,0"
+                                            VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Acepto "/>
+                                <Span Text="Términos de servicio"
+                                      TextColor="blue"
+                                      TextDecorations="Underline">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding TerminosCommand}"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                                <Span Text=" y ">                                    
+                                </Span>
+                                <Span Text="Política de privacidad"
+                                      TextColor="blue"
+                                      TextDecorations="Underline">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding PoliticasCommand}"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </material:MaterialLabel>
+                    <material:MaterialButton Grid.Row="8"
+                                             Grid.Column="0"
+                                             Grid.ColumnSpan="2"
+                                             Text="Crear mi cuenta"
+                                             VerticalOptions="Start"
+                                             Margin="0,15,0,0"
+                                             Command="{Binding IRegistroUsuario}"/>
+                    <material:MaterialLabel Grid.Row="9"
+                                            Grid.Column="0" 
+                                            Grid.ColumnSpan="2"                                    
+                                            HorizontalOptions="Center"
+                                            TypeScale="Caption"
+                                            Margin="0,0,0,0"
+                                            VerticalOptions="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="¿Ya tienes una cuenta? "/>
+                                <Span Text="Inicia sesión"
+                                      TextColor="blue"
+                                      TextDecorations="Underline">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding NavegaraIniciarsesionCommand}"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </material:MaterialLabel>
+                    <BoxView Grid.Row="10"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             BackgroundColor="DarkGray"
+                             HeightRequest="1"
+                             VerticalOptions="Center"
+                             Margin="0,25,0,20"/>
+                    <material:MaterialButton Grid.Row="11"
+                                             Grid.Column="0"
+                                             Grid.ColumnSpan="2"                                     
+                                             VerticalOptions="Start"                                                                        
+                                             TextColor="white"
+                                             Text="&#xF1A0;   Regístrate con Google"   
+                                             Command="{Binding Login}"
+                                             BackgroundColor="#F90101"
+                                             FontFamily="GoogleIcon">
+                    </material:MaterialButton>
+                </Grid>            
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    

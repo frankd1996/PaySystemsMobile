@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+             x:Class="PaySystemsMobile.MainPage"
+             material:MaterialNavigationPage.StatusBarColor="{StaticResource Material.Color.PrimaryVariant}"
+             material:MaterialNavigationPage.AppBarColor="{StaticResource Material.Color.Primary}"
+             material:MaterialNavigationPage.AppBarTitleTextAlignment="Start"
+             Title="Start">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackLayout>
+            <material:MaterialTextField Placeholder="Usuario"                                                                                                                                                                                                                                                            
+                                            Margin="20">
+            </material:MaterialTextField>
+
+            <material:MaterialTextField Placeholder="Contraseña" 
+                                            InputType="Password"
+                                            Margin="20"/>
+            <material:MaterialButton Text="Prueba">
+
+            </material:MaterialButton>
+
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="30" Color="{StaticResource Material.Color.Primary}"></BoxView>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
