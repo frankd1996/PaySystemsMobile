@@ -29,19 +29,19 @@ namespace PaySystemsMobile.ViewModels
                 },
                 new CarouselObjectModel
                 {
-                    Foto = "img_laptopcarrito.jpg",
+                    Foto = "img_laptopfondoverde.png",
                     TextLabel1="Lorem\nIpsum",
                     TextLabel2="Loren Ipsum",
                 },
                 new CarouselObjectModel
                 {
-                    Foto = "img_laptopcarrito.jpg",
+                    Foto = "img_streaming.jpg",
                     TextLabel1="Lorem\nIpsum",
                     TextLabel2="Loren Ipsum",
                 },
                 new CarouselObjectModel
                 {
-                    Foto = "img_laptopcarrito.jpg",
+                    Foto = "img_laptopcarrito1.jpg",
                     TextLabel1="Lorem\nIpsum",
                     TextLabel2="Loren Ipsum",
                 },
