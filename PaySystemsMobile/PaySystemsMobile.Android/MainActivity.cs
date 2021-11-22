@@ -4,6 +4,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using System.Net;
 
 namespace PaySystemsMobile.Droid
 {
@@ -19,11 +20,12 @@ namespace PaySystemsMobile.Droid
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, savedInstanceState);
             global::Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
             XF.Material.Droid.Material.Init(this, savedInstanceState);
+            ServicePointManager.ServerCertificateValidationCallback += (o, cert, chain, errors) => true; //solucionamos error de certificacion de SSL en Android (URL remota con Conveyor)
             LoadApplication(new App());            
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);//no se si es necesario para error de SSL en Android (URL remota con Conveyor)
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }

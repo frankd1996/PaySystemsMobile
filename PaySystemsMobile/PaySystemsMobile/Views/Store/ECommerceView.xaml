@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaySystemsMobile.Views.Store.ECommerceView"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="icono_aplicacion.png"
+                   HorizontalOptions="End"
+                   HeightRequest="40"
+                   Margin="50,15,0,0"/>
+        </StackLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <material:MaterialCard BackgroundColor="#FAFCFF"
+                                   HasShadow="False">
+                <Grid RowDefinitions="auto, auto"
+                      ColumnDefinitions="auto, auto">
+                    <Image Source="amazon.png"
+                           Grid.RowSpan="2"
+                           WidthRequest="200"
+                           HeightRequest="100"/>
+                    <material:MaterialLabel Text="Amazon"
+                                            FontAttributes="Bold"
+                                            TextColor="#000000"
+                                            Grid.Column="1"
+                                            TypeScale="Body1"/>
+                    <StackLayout Grid.Column="1"
+                                 Grid.Row="1">
+                        <material:MaterialLabel Text="Precio: 10$"
+                                                Grid.Column="1"/>
+                        <material:MaterialButton Text="Comprar"
+                                                 Command="{Binding ComprarCommand}"/>
+                    </StackLayout>
+                </Grid>
+            </material:MaterialCard>
+
+            <material:MaterialCard BackgroundColor="#FAFCFF"
+                                   HasShadow="true">
+                <Grid RowDefinitions="auto, auto"
+                      ColumnDefinitions="auto, auto">
+                    <Image Source="ebay.png"
+                           Grid.RowSpan="2"
+                           WidthRequest="200"
+                           HeightRequest="100"/>
+                    <material:MaterialLabel Text="ebay"
+                                            FontAttributes="Bold"
+                                            TextColor="#000000"
+                                            Grid.Column="1"/>
+                    <StackLayout Grid.Column="1"
+                                 Grid.Row="1">
+                        <material:MaterialLabel Text="Precio: 10$"
+                                                Grid.Column="1"/>
+                        <material:MaterialButton Text="Comprar"
+                                                 Command="{Binding ComprarCommand}"/>
+                    </StackLayout>
+                </Grid>
+            </material:MaterialCard>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+

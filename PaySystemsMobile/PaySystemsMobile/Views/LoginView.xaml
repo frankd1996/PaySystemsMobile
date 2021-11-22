@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaySystemsMobile.Views.LoginView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+             ios:NavigationPage.IsNavigationBarTranslucent="True"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout>
+                <Grid RowDefinitions="auto,auto,auto,auto,auto"
+                      ColumnDefinitions="auto,*"
+                      ColumnSpacing="0"              
+                      Padding="20,30,20,10"
+                      VerticalOptions="FillAndExpand"                      
+                      AbsoluteLayout.LayoutBounds="1,1,1,1" 
+                      AbsoluteLayout.LayoutFlags="All"
+                      BackgroundColor="{x:StaticResource Material.Color.Background}">                    
+                    <Button Grid.Column="0"
+                            Text="&#xe5c4;"
+                            WidthRequest="50"
+                            Margin="-15,0,0,0"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            FontFamily="Material"
+                            FontSize="30"
+                            TextColor="DarkGray"
+                            Command="{Binding NavegaraPresentacionCommand}"/>
+                    <Image Source="icono_aplicacion.png"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           HorizontalOptions="Center"
+                           HeightRequest="40"
+                           Margin="0,15,0,0"/>
+                    <material:MaterialLabel Text="Inicia sesión"
+                                            TextColor="{x:StaticResource Material.Color.OnBackground}"
+                                            TypeScale="H4"
+                                            Grid.Row="1"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="2"
+                                            Margin="0,15,0,30"/>                    
+                    <material:MaterialTextField x:Name="Email"
+                                                Grid.Row="2"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                Margin="0,0,0,10"
+                                                Placeholder="Email"
+                                                Text="{Binding Email}"
+                                                CardBackgroundColor="#FAFCFF"                                                                                                                                  
+                                                TextColor="{x:StaticResource Material.Color.OnSurface}"
+                                                PlaceholderColor="#AAB2B5"                                                                                         
+                                                TintColor="#AAB2B5"
+                                                ShouldAnimateUnderline="false"
+                                                InputType="Email"
+                                                LeadingIcon="icono_email.png"
+                                                LeadingIconTintColor="darkgray"
+                                                FloatingPlaceholderEnabled="true"/>
+                    <material:MaterialTextField x:Name="Password"
+                                                Grid.Row="3"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                Margin="0,0,0,10"
+                                                Placeholder="Contraseña"
+                                                Text="{Binding Password}"
+                                                CardBackgroundColor="#FAFCFF"                                                                                                                                  
+                                                TextColor="{x:StaticResource Material.Color.OnSurface}"
+                                                PlaceholderColor="#AAB2B5"                                                
+                                                TintColor="#AAB2B5"
+                                                ShouldAnimateUnderline="false"
+                                                InputType="Password"
+                                                LeadingIcon="icono_password.png"
+                                                LeadingIconTintColor="darkgray"
+                                                FloatingPlaceholderEnabled="true"/>
+                    <material:MaterialButton x:Name="botonIniciarSesion"
+                                             Grid.Row="4"
+                                             Grid.Column="0"
+                                             Grid.ColumnSpan="2"
+                                             Text="Iniciar sesión"
+                                             IsEnabled="False"
+                                             VerticalOptions="Start"
+                                             Margin="0,15,0,0"
+                                             Command="{Binding IniciarSesionCommand}"/>                    
+                </Grid>
+            </AbsoluteLayout>
+        </ScrollView>        
+    </ContentPage.Content>
+</ContentPage>

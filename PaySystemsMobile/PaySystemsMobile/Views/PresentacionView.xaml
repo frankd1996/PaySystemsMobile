@@ -120,7 +120,8 @@
                     TextColor="white"
                     Grid.Row="0"
                     Grid.Column="2"                                     
-                    BackgroundColor="Transparent"/>
+                    BackgroundColor="Transparent"
+                    Command="{Binding NavegaraLoginCommand}"/>
             <Button Text="&#xe5d4;"
                     FontFamily="Material"
                     TextColor="DarkGray"

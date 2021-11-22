@@ -14,6 +14,7 @@ namespace PaySystemsMobile.ViewModels
     {
         public ObservableCollection<CarouselObjectModel> CarouselObject { get; set; }
         public ICommand NavegaraRegistroCommand { get; set; }
+        public ICommand NavegaraLoginCommand { get; set; }
         public INavigation Navigation { get; set; }    
 
         public PresentacionViewModel(INavigation navigation)
@@ -45,7 +46,8 @@ namespace PaySystemsMobile.ViewModels
                     TextLabel2="No te preocupes más por la forma pago\n¡Feliz compra!",
                 }
             };
-            NavegaraRegistroCommand = new Command(async() => await Navigation.PushAsync(new RegistroView()));            
+            NavegaraRegistroCommand = new Command(async() => await Navigation.PushAsync(new RegistroView()));
+            NavegaraLoginCommand = new Command(async () => await Navigation.PushAsync(new LoginView()));
             Navigation = navigation;            
         }          
     }    
