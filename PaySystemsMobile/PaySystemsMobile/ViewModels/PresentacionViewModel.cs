@@ -24,27 +24,27 @@ namespace PaySystemsMobile.ViewModels
                 new CarouselObjectModel
                 {
                     Foto = "img_laptopcarrito.jpg",
-                    TextLabel1="Compra en línea\npagando con tu\nmoneda local",
-                    TextLabel2="Compra donde quieras, sin\ntarjeta de crédito",
+                    TextLabel1="Lorem\nIpsum",
+                    TextLabel2="Loren Ipsum",
                 },
                 new CarouselObjectModel
                 {
-                    Foto = "img_laptopfondoverde.png",
-                    TextLabel1="Escoge tu plataforma\nde confianza",
-                    TextLabel2="Compra para tí o tu negocio,\nen minutos",
+                    Foto = "img_laptopcarrito.jpg",
+                    TextLabel1="Lorem\nIpsum",
+                    TextLabel2="Loren Ipsum",
                 },
                 new CarouselObjectModel
                 {
-                    Foto = "img_streaming.jpg",
-                    TextLabel1="Streaming sin\nlímites",
-                    TextLabel2="Adquiere tus plataformas favoritas\nde entretenimiento, con un click",
+                    Foto = "img_laptopcarrito.jpg",
+                    TextLabel1="Lorem\nIpsum",
+                    TextLabel2="Loren Ipsum",
                 },
                 new CarouselObjectModel
                 {
-                    Foto = "img_laptopcarrito1.jpg",
-                    TextLabel1="Paga como\nquieras",
-                    TextLabel2="No te preocupes más por la forma pago\n¡Feliz compra!",
-                }
+                    Foto = "img_laptopcarrito.jpg",
+                    TextLabel1="Lorem\nIpsum",
+                    TextLabel2="Loren Ipsum",
+                },
             };
             NavegaraRegistroCommand = new Command(async() => await Navigation.PushAsync(new RegistroView()));
             NavegaraLoginCommand = new Command(async () => await Navigation.PushAsync(new LoginView()));
