@@ -2,7 +2,9 @@
 
 PaySystemsMobile is a project built with the Xamarin Forms framework (Android Project), which consists of a virtual store that offers streaming services and online purchases paying with your local currency. This project has served as the basis for starting the development of my personal ServiWallet project, which will offer these services and many more! 
 
-## ¡Welcome to PaySystemsMobile! 
+## ¡Welcome to PaySystemsMobile!
+
+Click on the image to see on Youtube:
 
 [![Alt text](https://img.youtube.com/vi/OaVvTxtXDYQ/0.jpg)](https://www.youtube.com/watch?v=OaVvTxtXDYQ)
 
